@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Demonstration</title>
+    </title>
+</head>
+<body>
+    <!--ID  selector -->
+    <h1 id="heading">ID selector to blue</h1>
+<div class="box" id="unique-box">
+    <!-- direct child selector -->
+    <h2>Element Direct Child</h2>
+    <h3 class="child">class direct child</h3>
+    <span><h2>element not direct child</h2></span>
+    <span><h3 class="child">class not direct child</h3></span>
+    <!-- Element Selector -->
+     <p>p element selector change color to green</p>
+     <!-- simple class selector -->
+    <p class="simple">simple class selector to red.</p>
+    <!-- Class Selectors -->
+<div class="inner box first-box">multiple class</div>
+<div class="inner box">Inner box 2</div>
+<!-- child selector descendant -->
+ <ul class="list">
+     <li>ul li - element descendant></li>
+    </ul>
+        <li>li element descendant all levels</li>    
+        <li class="highlight">
+            ul.list li.highlight - class descendant all level
+        </li>
+    </ul>
+    <li class="hightlight">ul.list li.hightlight - class descendant</li>
+</ul>
+
+<!-- Attribute Selector -->
+ <input type="text" placeholder="Attribute Selector" />
+ <a href="#" class="link" title="Link Title">Link with title</a>
+ <!-- class direct Sibling Selector -->
+  <div class="box-sibling">class direct sibling</div>
+  <a href="#">element direct Sibling a</a>
+  <!-- Pseudo-Class Selector -->
+  <a href="#" class="pseudo-class link">pseudo-class Selector</a>
+</div>
+<!-- General Sibling Selector -->
+<p class="general-sibling">class General Sibling</p>
+<h4>Element General Sibling</h4>
+<h5>multiple elements selection</h5>
+<h6>multiple elements selection</h6>
+<p class="multiple1">multiple class selection</p>
+    <p class="multiple2">multiple class selection</p>
+</body>
+</html>
