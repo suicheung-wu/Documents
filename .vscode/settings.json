@@ -18,6 +18,23 @@
         "titleBar.inactiveBackground": "#42b88399",
         "titleBar.inactiveForeground": "#15202b99"
     },
+    "editor.tokenColorCustomizations": {
+        "functions": "#f294fb",
+        "strings": "#e1fd87"
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "method": "#c4aee4",
+            "variable": "#91c9c4",
+            "property": "#89992e",
+            "parameter": "#89d0f0",
+            "*.callable":"#f79558d3",
+            "*.constant":"#3700ff",
+            "*.library":"#e5ff00",
+            "boolean":"#ff0000",
+            "arrow":"#fff700",
+        }
+    },
     "peacock.color": "#42b883",
     "livePreview.defaultPreviewPath": "/index.html"
 }

@@ -1,34 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/Documents/wu/my-app/src/index.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav class="navbar">
-      <div class="container navbar-flex">
-        <img src="./img/logo.png" alt="" class="logo" />
-        <!-- desktop menu -->
-        <div class="main-menu">
+import { useState } from "react";
+import logo from "/src/assets/logo.png";
+import PageLink from "./JS pagelink";
+import SocialLink from "./SocialLink";
+const Navbar = () => {
+  const [isToggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle(!isToggle);
+  };
+    return (
+        <>
+            <Navbar />
+
+            {/* <!-- hero --> */}
+            <div class="hero">
+      <div class="container">
+        <h1>continue exploring</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#" class="btn">
+
+<nav className="navbar">
+                <div class="container navbar-flex">
+                    <img src="./img/logo.png" alt="" class="logo" />
+                    {/* <!-- desktop menu --> */}
+                    <div className="main-menu">
           <ul class="menu-list">
-            <li class="menu-item"><a href="#">Home</a></li>
+                    <li class="menu-item"><a href="#">Home</a></li>
             <li class="menu-item"><a href="#about">About</a></li>
             <li class="menu-item"><a href="#services">Services</a></li>
             <li class="menu-item"><a href="#tours">Tours</a></li>
@@ -49,13 +45,18 @@
             </li>
           </ul>
            </div>
-        <!-- mobile menu -->
-        <div class="mobile-menu">
-          <div class="mobile-menu-toggle">
-            <i class="fa-solid fa-bars fa-2x"></i>
+        {<!-- mobile menu -->
+        <div className='mobile-menu'>
+          <div className='mobile-menu-toggle' onClick={handleToggle}>
+            <i className="fa-solid fa-bars fa-2x"></i>
           </div>
-          <div class="mobile-menu-items">
-            <ul class="mobile-menu-list">
+          <div 
+          className={
+            isToggle ? "mobile-menu-items active" : "mobile-menu-list"
+          }
+          >
+            <pageLink>
+            
               <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
@@ -65,12 +66,7 @@
         </div>
       </div>
     </nav>
-    <!-- hero -->
-    <div class="hero">
-      <div class="container">
-        <h1>continue exploring</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <a href="#" class="btn">explore tours</a>
+            explore tours</a>
       </div>
     </div>
     <!-- about -->
@@ -199,3 +195,6 @@
       </div>
       <p>Copyright &copy; 2025 All Rights Reserved</p>
       <p>Copyright &copy; <span id="date"></span> All Rights Reserved</p>
+    )
+}
+export default App;
